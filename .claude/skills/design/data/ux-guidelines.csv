@@ -1,0 +1,7 @@
+category,rule,do_pattern,do_code,dont_pattern,dont_code,severity
+Navigation,Always keep primary navigation visible,Sticky navigation bar,position:sticky;top:0;,Hidden navigation requiring scroll,display:none until scroll,HIGH
+Forms,Show error messages near fields,Inline validation,message under input field,Error only at submit,alert("error"),HIGH
+Accessibility,Maintain minimum contrast ratio,4.5:1 contrast,text color #111 on white,light gray text,#aaa on white,HIGH
+Animation,Limit animation duration,200ms micro interactions,transition:all .2s ease;,long animation delays,transition:all 1.2s ease,MEDIUM
+Performance,Lazy load images for long pages,loading=lazy,img loading="lazy",load all images immediately,img src="large.jpg",MEDIUM
+Buttons,Use clear CTA labels,Start Free Trial,button text descriptive,Click Here generic label,button text vague,LOW

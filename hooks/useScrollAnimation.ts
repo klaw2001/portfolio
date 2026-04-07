@@ -1,0 +1,11 @@
+"use client";
+
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+export function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return { ref, isInView };
+}

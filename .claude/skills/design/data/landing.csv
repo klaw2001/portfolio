@@ -1,0 +1,6 @@
+pattern_name,section_order,cta_placement,color_strategy,effects,conversion_tips
+SaaS Hero Conversion,Hero → Features → Integrations → Testimonials → Pricing → CTA,Primary CTA above fold + repeat after pricing,light background dark text orange CTA,hover lift cards micro animations,show product screenshot in hero
+Product Showcase,Hero → Demo Video → Benefits → Use Cases → CTA,hero button + sticky header CTA,neutral background strong product color accent,video autoplay hover highlights,focus on product not text
+Before After Transformation,Hero → Problem → Before/After → Social Proof → CTA,CTA after transformation section,high contrast colors emotional tone,scroll reveal animation,use emotional storytelling
+Restaurant Menu First,Hero → Menu Highlights → Gallery → Reviews → Location → CTA,CTA reservation button sticky header,warm colors red gold,parallax food photos,use real food photography
+Fintech Trust Builder,Hero → Metrics → Security → Testimonials → CTA,CTA after proof sections,dark background purple accents,glow hover cards,add trust badges

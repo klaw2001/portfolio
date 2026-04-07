@@ -1,0 +1,7 @@
+name,description,implementation,use_cases,do_examples,dont_examples
+Glassmorphism,Transparent glass cards with blur and soft borders,backdrop-filter blur 20px translucent bg SaaS dashboards fintech,login cards pricing cards,solid opaque cards without depth
+Minimal Flat,Clean flat UI with strong typography and whitespace,no shadows simple borders startups SaaS tools,Notion linear style UI,overuse of gradients and heavy shadows
+Neumorphism,Soft extruded UI elements with subtle shadows,dual box-shadow light + dark fintech dashboards toggles,soft UI buttons cards,low contrast elements
+Brutalism,Bold raw UI with large typography and harsh contrast,thick borders large fonts experimental sites,creative portfolios startups,overly polished UI
+Luxury Editorial,Serif typography large imagery minimal UI,Playfair headings large whitespace luxury brands fashion magazines,fashion brand landing pages,tech styled UI
+Dark Glass,Dark UI with glass panels and glowing accents,blur cards glow borders fintech crypto dashboards,crypto portfolio dashboards,bright white backgrounds

@@ -1,0 +1,7 @@
+data_type,best_chart,colors,accessibility,library
+Time Series,Line Chart,blue primary + gray grid,ensure colorblind palette,chart.js
+Comparison,Bar Chart,primary vs secondary colors,label each bar,recharts
+Distribution,Histogram,monochrome gradient,avoid red green combos,d3.js
+Part to Whole,Pie Chart,5 color palette max,include percentage labels,chart.js
+Correlation,Scatter Plot,neutral dots + highlight trendline,add axis labels,d3.js
+Financial Data,Candlestick Chart,green red candles,colorblind safe alt palette,tradingview
