@@ -1,11 +1,30 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Rocket, Smartphone, Film, HardDrive } from "lucide-react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/data";
+import { techIconMap } from "@/lib/data";
+
+function TechIconTile({ tech, icon: Icon, color }: { tech: string; icon: React.ElementType; color: string }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      title={tech}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="flex items-center justify-center"
+    >
+      <Icon
+        className="w-5 h-5 transition-colors duration-200"
+        style={{ color: hovered ? color : "#71717a" }}
+      />
+    </div>
+  );
+}
 
 const badgeConfig: Record<string, string> = {
   emerald: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -122,25 +141,26 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
           </h3>
 
           {/* Tagline */}
-          <p className="text-sm font-medium text-zinc-400 mb-4 leading-relaxed">
+          <p className="text-sm font-medium text-zinc-400 mb-6 leading-relaxed line-clamp-2">
             {project.tagline}
           </p>
 
-          {/* Description */}
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-            {project.description}
-          </p>
-
-          {/* Tech pills */}
-          <div className="flex flex-wrap gap-2 mb-7">
-            {project.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-2.5 py-1 text-xs font-medium rounded-md bg-white/[0.05] text-white border border-white/20 hover:border-white/50 hover:bg-white/[0.10] transition-all duration-200 cursor-default"
-              >
-                {tech}
-              </span>
-            ))}
+          {/* Tech icons */}
+          <div className="flex flex-wrap gap-4 mb-7 items-center">
+            {project.techStack.map((tech) => {
+              const entry = techIconMap[tech];
+              if (!entry) return (
+                <span
+                  key={tech}
+                  className="px-2 py-0.5 text-[11px] font-medium rounded bg-white/[0.04] text-white/60 border border-white/20"
+                >
+                  {tech}
+                </span>
+              );
+              return (
+                <TechIconTile key={tech} tech={tech} icon={entry.icon as React.ElementType} color={entry.color} />
+              );
+            })}
           </div>
 
           {/* Links */}

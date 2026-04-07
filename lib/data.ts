@@ -23,6 +23,8 @@ import {
   Film,
   Clapperboard,
   Bot,
+  Shield,
+  BarChart2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -46,6 +48,16 @@ import {
   SiVercel,
   SiNginx,
   SiGithubactions,
+  SiElectron,
+  SiPython,
+  SiThreedotjs,
+  SiCloudflare,
+  SiRazorpay,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiTelegram,
+  SiGooglechrome,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -641,6 +653,55 @@ export const techCategories: TechCategory[] = [
     ],
   },
 ];
+
+// ─── Tech Icon Map (for project cards) ───────────────────────
+
+export const techIconMap: Record<string, { icon: IconType | LucideIcon; color: string }> = {
+  // Next.js variants
+  "Next.js": { icon: SiNextdotjs, color: "#ffffff" },
+  "Next.js 14": { icon: SiNextdotjs, color: "#ffffff" },
+  "Next.js 15": { icon: SiNextdotjs, color: "#ffffff" },
+  "Next.js 16": { icon: SiNextdotjs, color: "#ffffff" },
+  // Frontend
+  "React": { icon: SiReact, color: "#61DAFB" },
+  "TypeScript": { icon: SiTypescript, color: "#3178C6" },
+  "Tailwind CSS": { icon: SiTailwindcss, color: "#38BDF8" },
+  "Vanilla JS": { icon: SiJavascript, color: "#F7DF1E" },
+  "HTML": { icon: SiHtml5, color: "#E34F26" },
+  "CSS": { icon: SiCss, color: "#1572B6" },
+  // Backend
+  "Node.js": { icon: SiNodedotjs, color: "#8CC84B" },
+  "Express": { icon: SiExpress, color: "#ffffff" },
+  "Prisma": { icon: SiPrisma, color: "#5A67D8" },
+  "PostgreSQL": { icon: SiPostgresql, color: "#336791" },
+  "MongoDB": { icon: SiMongodb, color: "#47A248" },
+  "Redis": { icon: SiRedis, color: "#DC382D" },
+  "Socket.IO": { icon: SiSocketdotio, color: "#ffffff" },
+  // AI
+  "OpenAI API": { icon: SiOpenai, color: "#ffffff" },
+  "OpenAI": { icon: SiOpenai, color: "#ffffff" },
+  "OpenAI GPT-4o": { icon: SiOpenai, color: "#10A37F" },
+  "Pinecone": { icon: Database, color: "#5835CC" },
+  "XGBoost": { icon: BrainCircuit, color: "#a78bfa" },
+  // Infrastructure
+  "Docker": { icon: SiDocker, color: "#2496ED" },
+  "Vercel": { icon: SiVercel, color: "#ffffff" },
+  "Cloudflare R2": { icon: SiCloudflare, color: "#F38020" },
+  "BullMQ": { icon: Zap, color: "#F59E0B" },
+  "Webhook": { icon: Zap, color: "#F59E0B" },
+  // Specialized
+  "Electron": { icon: SiElectron, color: "#47848F" },
+  "Chrome Extension": { icon: SiGooglechrome, color: "#4285F4" },
+  "Three.js": { icon: SiThreedotjs, color: "#ffffff" },
+  "Python": { icon: SiPython, color: "#3776AB" },
+  "Telegram Bot API": { icon: SiTelegram, color: "#26A5E4" },
+  "Razorpay": { icon: SiRazorpay, color: "#3395FF" },
+  "NextAuth.js": { icon: Shield, color: "#a78bfa" },
+  "NextAuth.js v5": { icon: Shield, color: "#a78bfa" },
+  "Web Crypto API": { icon: Shield, color: "#10B981" },
+  "VAPI.ai": { icon: Mic, color: "#ffffff" },
+  "Recharts": { icon: BarChart2, color: "#8884d8" },
+};
 
 // ─── Skills ───────────────────────────────────────────────────
 

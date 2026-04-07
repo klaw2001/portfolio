@@ -3,12 +3,8 @@
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
-import CompactProjectCard from "@/components/CompactProjectCard";
 
 export default function Projects() {
-  const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
-
   return (
     <section id="projects" className="py-24 md:py-32 bg-transparent">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
@@ -27,30 +23,10 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        {/* Featured — large alternating cards */}
-        <div className="space-y-8 mb-16">
-          {featured.map((project, i) => (
+        {/* All projects — large alternating cards */}
+        <div className="space-y-8">
+          {projects.map((project, i) => (
             <FeaturedProjectCard key={project.id} project={project} index={i} />
-          ))}
-        </div>
-
-        {/* Divider */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-4 mb-12"
-        >
-          <div className="flex-1 h-px bg-white/[0.06]" />
-          <span className="text-xs font-medium text-zinc-600 uppercase tracking-widest">More projects</span>
-          <div className="flex-1 h-px bg-white/[0.06]" />
-        </motion.div>
-
-        {/* Rest — compact grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {rest.map((project, i) => (
-            <CompactProjectCard key={project.id} project={project} index={i} />
           ))}
         </div>
       </div>
