@@ -69,10 +69,10 @@ export default function Contact() {
           {/* Email */}
           <motion.a
             variants={itemVariants}
-            href="mailto:hrishikesh@hrishikeshnetke.in"
+            href="mailto:work@hrishikeshnetke.in"
             className="inline-block text-xl md:text-2xl font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors duration-200 mb-10 underline underline-offset-4 decoration-zinc-400/50 dark:decoration-zinc-600/50 hover:decoration-zinc-500 dark:hover:decoration-zinc-400"
           >
-            hrishikesh@hrishikeshnetke.in
+            work@hrishikeshnetke.in
           </motion.a>
 
           {/* Social links */}
@@ -116,7 +116,7 @@ export default function Contact() {
             </motion.a>
 
             <motion.a
-              href="mailto:hrishikesh@hrishikeshnetke.in"
+              href="mailto:work@hrishikeshnetke.in"
               whileHover={{ y: -2, borderColor: "rgba(161,161,170,0.5)", color: "#a1a1aa" }}
               whileTap={{ scale: 0.98 }}
               className="flex items-center gap-2 px-8 py-3.5 rounded-xl text-sm font-semibold text-gray-600 dark:text-gray-300 border border-black/20 dark:border-white/20 hover:border-zinc-400 dark:hover:border-zinc-500 transition-all duration-200"

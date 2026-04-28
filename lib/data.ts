@@ -7,6 +7,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Instagram,
   Mail,
   Globe,
   Layers,
@@ -757,19 +758,25 @@ export const socialLinks: SocialLink[] = [
   {
     platform: "linkedin",
     label: "LinkedIn",
-    url: "https://linkedin.com/in/hrishikeshnetke",
+    url: "https://www.linkedin.com/in/hrishikesh-netke-b62b09231/",
     icon: Linkedin,
   },
   {
     platform: "twitter",
     label: "Twitter",
-    url: "https://twitter.com/hrishikeshnetke",
+    url: "https://x.com/netke2611",
     icon: Twitter,
+  },
+  {
+    platform: "instagram",
+    label: "Instagram",
+    url: "https://www.instagram.com/ig_klaw/",
+    icon: Instagram,
   },
   {
     platform: "email",
     label: "Email",
-    url: "mailto:hrishikesh@hrishikeshnetke.in",
+    url: "mailto:work@hrishikeshnetke.in",
     icon: Mail,
   },
   {
