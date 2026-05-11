@@ -18,7 +18,6 @@ export default function AnimatedBackground() {
           background:
             "radial-gradient(circle at center, rgba(113,113,122,0.06) 0%, transparent 70%)",
           animation: "orb-drift-1 25s ease-in-out infinite",
-          willChange: "transform",
         }}
         className="dark:[background:radial-gradient(circle_at_center,rgba(113,113,122,0.07)_0%,transparent_70%)]"
       />
@@ -35,7 +34,6 @@ export default function AnimatedBackground() {
           background:
             "radial-gradient(circle at center, rgba(107,114,128,0.04) 0%, transparent 70%)",
           animation: "orb-drift-2 32s ease-in-out infinite",
-          willChange: "transform",
         }}
         className="dark:[background:radial-gradient(circle_at_center,rgba(82,82,91,0.06)_0%,transparent_70%)]"
       />

@@ -14,31 +14,28 @@ import { cn } from "@/lib/utils";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export const slideUp = {
-  hidden: { opacity: 0, y: 32, filter: "blur(4px)" },
+  hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: EASE },
   },
 };
 
 export const slideLeft = {
-  hidden: { opacity: 0, x: -40, filter: "blur(2px)" },
+  hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: EASE },
   },
 };
 
 export const slideRight = {
-  hidden: { opacity: 0, x: 40, filter: "blur(2px)" },
+  hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: EASE },
   },
 };

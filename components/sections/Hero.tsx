@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -12,11 +12,10 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   },
 };
@@ -29,8 +28,6 @@ const phrases = [
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { scrollY } = useScroll();
-  const decoratorY = useTransform(scrollY, [0, 500], [0, -60]);
 
   useEffect(() => setMounted(true), []);
 
@@ -53,34 +50,24 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise-texture"
     >
-      {/* Background radial gradient — parallax */}
-      <motion.div
+      {/* Background radial gradient */}
+      <div
         aria-hidden
-        style={{ y: decoratorY }}
         className="absolute inset-0 pointer-events-none"
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(113,113,122,0.08) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(82,82,91,0.06) 0%, transparent 60%)",
-          }}
-        />
-      </motion.div>
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(113,113,122,0.08) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(82,82,91,0.06) 0%, transparent 60%)",
+        }}
+      />
 
-      {/* Grid lines — parallax, subtle */}
-      <motion.div
+      {/* Grid lines — subtle */}
+      <div
         aria-hidden
-        style={{ y: decoratorY }}
         className="absolute inset-0 pointer-events-none opacity-30"
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
-          }}
-        />
-      </motion.div>
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+        }}
+      />
 
       {/* Content */}
       <motion.div
@@ -105,9 +92,9 @@ export default function Hero() {
           <AnimatePresence mode="wait">
             <motion.span
               key={currentIndex}
-              initial={{ opacity: 0, y: 12, filter: "blur(6px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block"
             >

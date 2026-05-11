@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "next-themes";
-import TypewriterLoader from "@/components/TypewriterLoader";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import "./globals.css";
 
@@ -60,7 +59,6 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
-          <TypewriterLoader />
           <AnimatedBackground />
           {children}
         </ThemeProvider>
